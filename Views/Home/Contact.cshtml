@@ -1,0 +1,59 @@
+﻿@model MyBlog.Models.ContactModel
+@{
+    ViewData["Title"] = "Liên hệ";
+}
+
+<section class="mt-5 mb-5">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold text-primary">
+            <i class="bi bi-envelope-paper-heart-fill me-2 text-danger"></i>Liên hệ với mình
+        </h2>
+
+        @if (ViewBag.SuccessMessage != null)
+        {
+            <div class="alert alert-success text-center shadow-sm rounded-3 w-75 mx-auto">
+                @ViewBag.SuccessMessage
+            </div>
+        }
+
+        <div class="card shadow-sm border-0 mx-auto" style="max-width: 600px;">
+            <div class="card-body p-4">
+                <form asp-action="Contact" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            <i class="bi bi-person-fill me-2 text-info"></i>Họ và tên
+                        </label>
+                        <input asp-for="Name" class="form-control border-primary-subtle" placeholder="Nhập họ và tên..." required />
+                        <span asp-validation-for="Name" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            <i class="bi bi-envelope-at-fill me-2 text-warning"></i>Email
+                        </label>
+                        <input asp-for="Email" type="email" class="form-control border-primary-subtle" placeholder="Nhập email của bạn..." required />
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            <i class="bi bi-chat-dots-fill me-2 text-success"></i>Nội dung
+                        </label>
+                        <textarea asp-for="Message" class="form-control border-primary-subtle" rows="5" placeholder="Nhập lời nhắn của bạn..." required></textarea>
+                        <span asp-validation-for="Message" class="text-danger small"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+                        <i class="bi bi-send-fill me-1"></i>Gửi tin nhắn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

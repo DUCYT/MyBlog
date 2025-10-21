@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Thông tin cá nhân";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row align-items-center mb-4 pb-3">
+        <div class="col-md-3 text-center">
+            <img src="~/image/avatar2.jpg" alt="Avatar"
+                 class="rounded-circle border border-3 border-info shadow-sm"
+                 style="width:200px; height:200px; object-fit:cover;" />
+        </div>
+
+        <div class="col-md-9 d-flex flex-column justify-content-center">
+            <h2 class="fw-bold text-primary mb-1">Nguyễn Trung Đức</h2>
+            <h4 class="text-muted fw-semibold mb-0">Kỹ sư phần mềm</h4>
+        </div>
+    </div>
+
+    <h4 class="fw-bold text-primary border-bottom border-2 border-info pb-2 mb-4">
+        <i class="bi bi-person-circle me-2 text-info"></i>Thông tin cá nhân
+    </h4>
+
+    <div class="row text-center text-md-start mb-5">
+        <div class="col-md-6">
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-calendar-heart-fill text-danger me-2 fs-5"></i>
+                <span>11/04/2002</span>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-gender-male text-primary me-2 fs-5"></i>
+                <span>Nam</span>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-geo-alt-fill text-success me-2 fs-5"></i>
+                <span>Tiền Hải, Thái Bình</span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-telephone-fill text-success me-2 fs-5"></i>
+                <span>0358 117 931</span>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-envelope-fill text-danger me-2 fs-5"></i>
+                <a href="mailto:ducnguyen11042002@gmail.com" class="text-decoration-none text-dark text-nowrap">
+                    ducnguyen11042002@gmail.com
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-facebook text-primary me-2 fs-5"></i>
+                <a href="https://www.facebook.com/DucNguyenLoveAllGuys" target="_blank" class="text-decoration-none text-dark">
+                   DucNguyenLoveAllGuys
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="fw-bold text-primary border-bottom border-2 border-info pb-2 mb-4">
+        <i class="bi bi-mortarboard-fill me-2"></i>Học vấn
+    </h4>
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h5 class="fw-bold mb-1">Kỹ sư phần mềm</h5>
+            <p class="text-muted mb-1">2020 - 2025</p>
+        </div>
+        <div class="col-md-6">
+            <h5 class="fw-bold mb-1">Đại học FPT</h5>
+            <p>Chuyên sâu về phát triển .NET (ASP.NET, C#, EF Core, Razor Pages).</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4 class="fw-bold text-primary border-bottom border-2 border-info pb-2 mb-3">
+                <i class="bi bi-patch-check-fill me-2"></i>Kỹ năng chuyên môn
+            </h4>
+
+            <ul class="list-unstyled">
+                <li class="mb-2 d-flex align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                         alt="C#" class="skill-icon me-2" />
+                    <b>C#</b>: Trung cấp – WinForms, ASP.NET, EF Core, Razor Pages
+                </li>
+
+                <li class="mb-2 d-flex align-items-center">
+                    <i class="bi bi-database-fill-gear text-warning me-2 fs-5"></i>
+                    <b>SQL Server</b>: Trung cấp – tạo bảng, view, join
+                </li>
+
+                <li class="mb-2 d-flex align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
+                         alt="Visual Studio" class="skill-icon me-2" />
+                    <b>Visual Studio 2022</b>: IDE chính sử dụng cho hầu hết dự án
+                </li>
+
+                <li class="mb-2 d-flex align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                         alt="Git" class="skill-icon me-2" />
+                    <b>Git, GitHub</b>: Quản lý source code
+                </li>
+
+                <li class="mb-2 d-flex align-items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                         alt="Postman" class="skill-icon me-2" />
+                    <b>Postman</b>: Kiểm thử APIs
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="fw-bold text-primary border-bottom border-2 border-info pb-2 mb-3">
+                <i class="bi bi-heart-fill me-2"></i>Sở thích
+            </h4>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-book-fill text-info me-2 fs-5"></i>Đọc sách</li>
+                <li><i class="bi bi-cup-hot-fill text-warning me-2 fs-5"></i>Nấu ăn</li>
+                <li><i class="bi bi-film text-danger me-2 fs-5"></i>Xem phim</li>
+                <li><i class="bi bi-controller text-success me-2 fs-5"></i>Chơi game</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+}
