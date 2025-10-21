@@ -38,14 +38,18 @@ namespace MyBlog.Controllers
         {
             if (ModelState.IsValid)
             {
+                contact.CreatedAt = DateTime.UtcNow;
+
                 _context.Contacts.Add(contact);
                 _context.SaveChanges();
 
                 ViewBag.SuccessMessage = "Cảm ơn bạn đã liên hệ! Mình sẽ phản hồi sớm nhất có thể!";
                 ModelState.Clear();
             }
+
             return View();
         }
+
 
         public IActionResult Privacy()
         {
