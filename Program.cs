@@ -1,14 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyBlog.Models;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
 builder.Services.AddControllersWithViews();
 
-// Kết nối đến SQL Server (lấy chuỗi từ appsettings.json)
+//// Kết nối đến SQL Server (lấy chuỗi từ appsettings.json)
+//builder.Services.AddDbContext<BlogContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<BlogContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
